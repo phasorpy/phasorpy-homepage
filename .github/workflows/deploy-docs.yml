@@ -47,4 +47,5 @@ jobs:
         publish_dir: _build/html
         publish_branch: main
         destination_dir: .
+        keep_files: true
         cname: www.phasorpy.org
