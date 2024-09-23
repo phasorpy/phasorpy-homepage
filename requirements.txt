@@ -1,0 +1,5 @@
+# Requirements for building the PhasorPy homepage
+#
+sphinx
+sphinx-issues
+pydata-sphinx-theme
