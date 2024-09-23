@@ -32,20 +32,20 @@ jobs:
         python -m pip install -r requirements.txt
     - name: Build docs
       run: |
-        make html
+        make dirhtml
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
         name: docs
-        path: _build/html
+        path: _build/dirhtml
     - name: Deploy docs
       if: github.event_name == 'push'
       uses: peaceiris/actions-gh-pages@v4
       with:
         personal_token: ${{ secrets.PHASORPY_DOC_DEPLOY_KEY }}
         external_repository: phasorpy/phasorpy.github.io
-        publish_dir: _build/html
+        publish_dir: _build/dirhtml
         publish_branch: main
         destination_dir: .
         keep_files: true
-        cname: www.phasorpy.org
+        # cname: www.phasorpy.org
