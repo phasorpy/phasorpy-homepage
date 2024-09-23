@@ -1,2 +1,3 @@
-# phasorpy-homepage
+# PhasorPy homepage
+
 Source code for the PhasorPy homepage
