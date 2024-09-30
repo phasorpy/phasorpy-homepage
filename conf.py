@@ -12,6 +12,7 @@ author = 'PhasorPy Contributors'
 
 extensions = [
     'sphinx.ext.todo',
+    'sphinx_design',
 ]
 
 templates_path = ['_templates']
@@ -21,7 +22,10 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 html_theme = 'pydata_sphinx_theme'
 html_static_path = ['_static']
+html_js_files = ['custom-icons.js']
 html_show_sourcelink = False
+
+html_title = 'PhasorPy homepage'
 
 html_logo = '_static/logo.png'
 # html_favicon = ''
@@ -46,11 +50,12 @@ html_theme_options = {
             'url': 'https://github.com/phasorpy/phasorpy',
             'icon': 'fa-brands fa-github',
         },
-        # {
-        #     'name': 'PyPI',
-        #     'url': 'https://pypi.org/project/phasorpy/',
-        #     'icon': 'fa-custom fa-pypi', "type": "fontawesome",
-        # },
+        {
+            'name': 'PyPI',
+            'url': 'https://pypi.org/project/phasorpy/',
+            'icon': 'fa-custom fa-pypi',
+            'type': 'fontawesome',
+        },
     ],
     'secondary_sidebar_items': [],
     'navbar_persistent': [],

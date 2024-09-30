@@ -2,4 +2,5 @@
 #
 sphinx
 sphinx-issues
+sphinx-design
 pydata-sphinx-theme
