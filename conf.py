@@ -42,22 +42,36 @@ html_theme_options = {
         'alt_text': 'PhasorPy',
         # 'image_dark': '_static/logo-dark.svg',
     },
-    'header_links_before_dropdown': 3,
+    'header_links_before_dropdown': 4,
     'navigation_with_keys': False,
+    # 'collapse_navigation': True,
+    'navbar_align': 'content',  # [left, content, right]
+    'navbar_persistent': [],
+    # 'navbar_center': [],  # , 'version-switcher', 'navbar-nav'
+    'navbar_end': [
+        # 'search-button',
+        # 'version-switcher',
+        'theme-switcher',
+        'navbar-icon-links'
+    ],
     'icon_links': [
-        {
-            'name': 'GitHub',
-            'url': 'https://github.com/phasorpy/phasorpy',
-            'icon': 'fa-brands fa-github',
-        },
         {
             'name': 'PyPI',
             'url': 'https://pypi.org/project/phasorpy/',
             'icon': 'fa-custom fa-pypi',
             'type': 'fontawesome',
         },
+        {
+            'name': 'GitHub',
+            'url': 'https://github.com/phasorpy/phasorpy',
+            'icon': 'fa-brands fa-github',
+        },
+        # {
+        #     'name': 'Home',
+        #     'url': 'https://www.phasorpy.org',
+        #     'icon': 'fa fa-home',
+        # },
     ],
-    'secondary_sidebar_items': [],
-    'navbar_persistent': [],
+    # 'secondary_sidebar_items': [],
     'show_prev_next': False,
 }
