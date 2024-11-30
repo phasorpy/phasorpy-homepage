@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /stable/
 Disallow: /docs/main/
+Disallow: /docs/v
