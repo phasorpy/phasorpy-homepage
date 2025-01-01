@@ -5,7 +5,7 @@
 # project information
 
 project = 'PhasorPy'
-copyright = '2022-2024 PhasorPy Contributors'
+copyright = '2022-2025 PhasorPy Contributors'
 author = 'PhasorPy Contributors'
 
 # general configuration
