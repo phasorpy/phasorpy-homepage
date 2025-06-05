@@ -1,4 +1,13 @@
 User-agent: *
 Disallow: /stable/
 Disallow: /docs/main/
-Disallow: /docs/v
+Disallow: /docs/v0.1/
+Disallow: /docs/v0.2/
+Disallow: /docs/v0.3/
+Disallow: /docs/v0.4/
+Disallow: /docs/v0.5/
+Disallow: /docs/v0.6/
+Disallow: /docs/v0.7/
+Disallow: /docs/v0.8/
+Disallow: /docs/v0.9/
+Disallow: /docs/v0.10/
