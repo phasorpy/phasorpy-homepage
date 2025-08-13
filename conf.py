@@ -27,7 +27,7 @@ html_show_sourcelink = False
 
 html_title = 'PhasorPy homepage'
 
-html_logo = '_static/logo.png'
+html_logo = '_static/phasorpy_logo.svg'
 # html_favicon = ''
 
 pygments_style = 'sphinx'
@@ -40,7 +40,6 @@ html_theme_options = {
     'logo': {
         'text': 'PhasorPy',
         'alt_text': 'PhasorPy',
-        # 'image_dark': '_static/logo-dark.svg',
     },
     'header_links_before_dropdown': 4,
     'navigation_with_keys': False,
