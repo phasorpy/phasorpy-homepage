@@ -28,7 +28,7 @@ html_show_sourcelink = False
 html_title = 'PhasorPy homepage'
 
 html_logo = '_static/phasorpy_logo.svg'
-# html_favicon = ''
+html_favicon = 'favicon.ico'
 
 pygments_style = 'sphinx'
 
