@@ -30,6 +30,9 @@ html_title = 'PhasorPy homepage'
 html_logo = '_static/phasorpy_logo.svg'
 html_favicon = '_static/favicon.ico'
 
+html_title = ''
+html_short_title = ''
+
 pygments_style = 'sphinx'
 
 # extension configurations
