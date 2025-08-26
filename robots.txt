@@ -1,4 +1,7 @@
 User-agent: *
+Disallow: *.py
+Disallow: *.ipynb
+Disallow: *.zip
 Disallow: /stable/
 Disallow: /docs/main/
 Disallow: /docs/v0.1/
