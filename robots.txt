@@ -19,3 +19,8 @@ Disallow: /docs/v0.7/
 Disallow: /docs/v0.8/
 Disallow: /docs/v0.9/
 Disallow: /docs/v0.10/
+Disallow: /docs/v0.11/
+Disallow: /docs/v0.12/
+Disallow: /docs/v0.13/
+Disallow: /docs/v0.14/
+Disallow: /docs/v0.15/
