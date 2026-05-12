@@ -22,7 +22,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 html_theme = 'pydata_sphinx_theme'
 html_static_path = ['_static']
-html_js_files = ['custom-icons.js']
+html_js_files = [('custom-icons.js', {'defer': 'defer'})]
 html_show_sourcelink = False
 
 html_title = 'PhasorPy homepage'
