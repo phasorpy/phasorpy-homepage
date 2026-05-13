@@ -3,6 +3,11 @@
 https://www.sphinx-doc.org/en/master/usage/configuration.html
 """
 
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent))
+
 # project information
 
 project = 'PhasorPy'
