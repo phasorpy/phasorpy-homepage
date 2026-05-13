@@ -1,0 +1,111 @@
+# pre-commit https://pre-commit.com/
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-builtin-literals
+      - id: check-case-conflict
+      # - id: check-docstring-first
+      - id: check-executables-have-shebangs
+      - id: check-illegal-windows-names
+      - id: check-merge-conflict
+      - id: check-shebang-scripts-are-executable
+      - id: check-symlinks
+      - id: check-toml
+      - id: check-json
+      - id: check-xml
+      - id: check-yaml
+        args: [--allow-multiple-documents]
+      - id: name-tests-test
+        args: ["--pytest-test-first"]
+        exclude: "_conftest.py"
+      - id: debug-statements
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+      # - id: requirements-txt-fixer
+      - id: trailing-whitespace
+      - id: double-quote-string-fixer
+      - id: detect-private-key
+      - id: detect-aws-credentials
+      - id: forbid-submodules
+
+  - repo: https://github.com/pre-commit/pygrep-hooks
+    rev: v1.10.0
+    hooks:
+      - id: rst-backticks
+      - id: rst-directive-colons
+      - id: rst-inline-touching-normal
+      - id: python-no-eval
+      - id: python-no-log-warn
+      - id: python-use-type-annotations
+
+  - repo: https://github.com/crate-ci/typos
+    rev: v1.45.2
+    hooks:
+      - id: typos
+        args: []
+
+  - repo: https://github.com/mit-d/check-unicode
+    rev: v0.6.0
+    hooks:
+      - id: check-unicode
+      # or for auto-fix:
+      # - id: fix-unicode
+
+  - repo: https://github.com/rbubley/mirrors-prettier
+    rev: v3.8.3
+    hooks:
+      - id: prettier
+        args: [--end-of-line=auto]
+        types_or: [yaml, markdown, json]
+
+  - repo: https://github.com/myint/autoflake
+    rev: v2.3.3
+    hooks:
+      - id: autoflake
+
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v3.21.2
+    hooks:
+      - id: pyupgrade
+        args: [--py312-plus, --keep-runtime-typing]
+
+  - repo: https://github.com/pycqa/isort
+    rev: 8.0.1
+    hooks:
+      - id: isort
+
+  - repo: https://github.com/psf/black-pre-commit-mirror
+    rev: 26.3.1
+    hooks:
+      - id: black
+
+  - repo: https://github.com/keewis/blackdoc
+    rev: v0.4.6
+    hooks:
+      - id: blackdoc
+        additional_dependencies: ["black==26.3.1"]
+      - id: blackdoc-autoupdate-black
+
+  # when running with --fix place ruff lint hook
+  # before ruff-format, black, isort, etc
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.12
+    hooks:
+      - id: ruff-check
+  #     args: [--fix --show-fixes]
+  #   - id: ruff-format
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v2.1.0
+    hooks:
+      - id: mypy
+        args: []
+
+ci:
+  autofix_commit_msg: "[pre-commit.ci] auto fixes from pre-commit.com hooks"
+  autoupdate_commit_msg: "[pre-commit.ci] pre-commit autoupdate"
+  autofix_prs: false
+  autoupdate_schedule: weekly

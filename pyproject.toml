@@ -1,0 +1,65 @@
+[tool.check-unicode]
+allow-codepoints = [
+    "U+00B0",
+    "U+00E1",
+    "U+00E9",
+    "U+00ED",
+    "U+00F6",
+    "U+00FC",
+    "U+039B",
+    "U+03BB",
+]
+check-confusables = true
+
+[tool.ruff]
+line-length = 79
+
+[tool.ruff.lint]
+select = [
+    "ALL",
+]
+ignore = [
+    "A001",
+    "ERA001",  # commented-out-code
+    "COM812",
+    "S101",
+    "RUF012"
+]
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "single"
+
+[tool.black]
+line-length = 79
+target-version = ["py312", "py313", "py314"]
+skip-string-normalization = true
+
+[tool.isort]
+profile = "black"
+line_length = 79
+
+[tool.typos]
+
+[tool.typos.files]
+extend-exclude = []
+
+[tool.typos.default.extend-words]
+HSI = "HSI"
+avances = "avances"
+
+[tool.mypy]
+plugins = []
+enable_error_code = ["ignore-without-code", "redundant-expr", "truthy-bool"]
+strict = true
+warn_unreachable = true
+
+[[tool.mypy.overrides]]
+module = ["docutils", "docutils.*", "sphinx", "sphinx.*"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["gallery_tile"]
+disable_error_code = ["misc"]

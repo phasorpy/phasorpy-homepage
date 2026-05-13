@@ -1,6 +1,7 @@
-# Configuration file for the Sphinx documentation builder.
-# https://www.sphinx-doc.org/en/master/usage/configuration.html
-# pylint: skip-file
+"""Configuration file for the Sphinx documentation builder.
+
+https://www.sphinx-doc.org/en/master/usage/configuration.html
+"""
 
 # project information
 
@@ -13,6 +14,7 @@ author = 'PhasorPy Contributors'
 extensions = [
     'sphinx.ext.todo',
     'sphinx_design',
+    'gallery_tile',
 ]
 
 templates_path = ['_templates']
@@ -23,12 +25,15 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_theme = 'pydata_sphinx_theme'
 html_static_path = ['_static']
 html_js_files = [('custom-icons.js', {'defer': 'defer'})]
+html_css_files = ['sg_gallery.css', 'custom.css']
 html_show_sourcelink = False
 
 html_title = 'PhasorPy homepage'
 
 html_logo = '_static/phasorpy_logo.svg'
 html_favicon = '_static/favicon.ico'
+
+gallery_docs_root = 'https://www.phasorpy.org/docs/stable/'
 
 html_title = ''
 html_short_title = ''
@@ -37,7 +42,7 @@ pygments_style = 'sphinx'
 
 # extension configurations
 
-html_sidebars = {'**': []}
+html_sidebars: dict[str, list[str]] = {'**': []}
 
 html_theme_options = {
     'logo': {
@@ -54,7 +59,7 @@ html_theme_options = {
         # 'search-button',
         # 'version-switcher',
         'theme-switcher',
-        'navbar-icon-links'
+        'navbar-icon-links',
     ],
     'icon_links': [
         {
