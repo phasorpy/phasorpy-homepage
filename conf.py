@@ -3,8 +3,10 @@
 https://www.sphinx-doc.org/en/master/usage/configuration.html
 """
 
+import shutil
 import sys
 from pathlib import Path
+from typing import Any
 
 sys.path.insert(0, str(Path(__file__).parent))
 
@@ -90,3 +92,18 @@ html_theme_options = {
     # 'secondary_sidebar_items': [],
     'show_prev_next': False,
 }
+
+
+def _copy_404_for_dirhtml(app: Any, exception: Any) -> None:
+    """Copy 404/index.html to 404.html for dirhtml builds."""
+    if exception is not None or app.builder.name != 'dirhtml':
+        return
+    src = Path(app.outdir) / '404' / 'index.html'
+    dst = Path(app.outdir) / '404.html'
+    if src.exists():
+        shutil.copy2(src, dst)
+
+
+def setup(app: Any) -> None:
+    """Connect build-finished event to copy 404 page for dirhtml builds."""
+    app.connect('build-finished', _copy_404_for_dirhtml)
