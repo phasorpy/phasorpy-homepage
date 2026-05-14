@@ -3,7 +3,6 @@
 https://www.sphinx-doc.org/en/master/usage/configuration.html
 """
 
-import shutil
 import sys
 from pathlib import Path
 from typing import Any
@@ -101,7 +100,11 @@ def _copy_404_for_dirhtml(app: Any, exception: Any) -> None:
     src = Path(app.outdir) / '404' / 'index.html'
     dst = Path(app.outdir) / '404.html'
     if src.exists():
-        shutil.copy2(src, dst)
+        content = src.read_text(encoding='utf-8')
+        content = content.replace(
+            'data-content_root="../"', 'data-content_root="./"'
+        )
+        dst.write_text(content, encoding='utf-8')
 
 
 def setup(app: Any) -> None:
