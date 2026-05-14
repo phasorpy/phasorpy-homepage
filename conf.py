@@ -3,6 +3,7 @@
 https://www.sphinx-doc.org/en/master/usage/configuration.html
 """
 
+import shutil
 import sys
 from pathlib import Path
 from typing import Any
@@ -104,7 +105,10 @@ def _copy_404_for_dirhtml(app: Any, exception: Any) -> None:
         content = content.replace(
             'data-content_root="../"', 'data-content_root="./"'
         )
+        # Replace placeholder "#" home links with absolute root URL
+        content = content.replace('href="#"', 'href="/"')
         dst.write_text(content, encoding='utf-8')
+        shutil.rmtree(src.parent)
 
 
 def setup(app: Any) -> None:
