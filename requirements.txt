@@ -4,3 +4,4 @@ sphinx
 sphinx-issues
 sphinx-design
 pydata-sphinx-theme
+sphinx-notfound-page

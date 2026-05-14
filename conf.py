@@ -20,6 +20,7 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx_design',
     'gallery_tile',
+    'notfound.extension',
 ]
 
 templates_path = ['_templates']
@@ -46,6 +47,8 @@ html_short_title = ''
 pygments_style = 'sphinx'
 
 # extension configurations
+
+notfound_urls_prefix = None
 
 html_sidebars: dict[str, list[str]] = {'**': []}
 
