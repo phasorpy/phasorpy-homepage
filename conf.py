@@ -73,6 +73,12 @@ html_theme_options = {
     ],
     'icon_links': [
         {
+            'name': 'Documentation',
+            'url': 'https://www.phasorpy.org/docs/stable/',
+            'icon': 'fa-solid fa-book',
+            'type': 'fontawesome',
+        },
+        {
             'name': 'PyPI',
             'url': 'https://pypi.org/project/phasorpy/',
             'icon': 'fa-custom fa-pypi',
