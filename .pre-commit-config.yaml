@@ -42,7 +42,7 @@ repos:
       - id: python-use-type-annotations
 
   - repo: https://github.com/crate-ci/typos
-    rev: v1.45.2
+    rev: v1.48.0
     hooks:
       - id: typos
         args: []
@@ -55,7 +55,7 @@ repos:
       # - id: fix-unicode
 
   - repo: https://github.com/rbubley/mirrors-prettier
-    rev: v3.8.3
+    rev: v3.8.4
     hooks:
       - id: prettier
         args: [--end-of-line=auto]
@@ -92,7 +92,7 @@ repos:
   # when running with --fix place ruff lint hook
   # before ruff-format, black, isort, etc
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.12
+    rev: v0.15.20
     hooks:
       - id: ruff-check
   #     args: [--fix --show-fixes]
