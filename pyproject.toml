@@ -1,6 +1,7 @@
 [tool.check-unicode]
 allow-codepoints = [
     "U+00B0",
+    "U+00DF",
     "U+00E1",
     "U+00E9",
     "U+00ED",
@@ -32,6 +33,9 @@ quote-style = "single"
 
 [tool.ruff.lint.flake8-quotes]
 inline-quotes = "single"
+
+[tool.ruff.lint.flake8-copyright]
+notice-rgx = "(#\\s*Copyright\\s*\\(c\\)\\s*PhasorPy\\s*Contributors)"
 
 [tool.black]
 line-length = 79

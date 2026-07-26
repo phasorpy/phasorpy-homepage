@@ -1,3 +1,7 @@
+# Copyright (c) PhasorPy Contributors
+# SPDX-License-Identifier: MIT
+# See LICENSE.txt file in the project root for details.
+
 """Configuration file for the Sphinx documentation builder.
 
 https://www.sphinx-doc.org/en/master/usage/configuration.html

@@ -1,3 +1,7 @@
+# Copyright (c) PhasorPy Contributors
+# SPDX-License-Identifier: MIT
+# See LICENSE.txt file in the project root for details.
+
 """Custom directive to render Sphinx-Gallery style tutorial tiles."""
 
 from __future__ import annotations
